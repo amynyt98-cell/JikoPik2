@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#4a3226">
+<title>کافه جیک و پیک | منوی آنلاین</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- نوار بالا -->
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-logo" id="brandLogo">☕</span>
+    <div class="brand-text">
+      <strong id="cafeName">کافه جیک و پیک</strong>
+      <small>منوی آنلاین</small>
+    </div>
+  </div>
+  <div class="topbar-actions">
+    <button class="btn-icon" id="trackBtn" title="پیگیری سفارش" data-act="open-track">🧾</button>
+    <button class="cart-btn" id="cartBtn" data-act="open-cart" aria-label="سبد خرید">
+      🛒<span class="cart-badge" id="cartBadge">۰</span>
+    </button>
+  </div>
+</header>
+
+<!-- بنر وضعیت QR -->
+<div id="qrBanner" class="qr-banner hidden"></div>
+
+<main id="menuView">
+  <section class="hero">
+    <p class="hero-eyebrow">خوش آمدید 🌿</p>
+    <h2 id="heroTitle">منوی کافه جیک و پیک</h2>
+    <p class="hero-sub" id="heroSub">سفارش خود را انتخاب کنید، به سبد اضافه کنید و ثبت بزنید — ما آماده می‌کنیم.</p>
+  </section>
+
+  <nav class="chips-bar" id="chipsBar" aria-label="دسته‌بندی‌ها"></nav>
+
+  <div id="menuSections"></div>
+
+  <footer class="foot" id="menuFoot"></footer>
+</main>
+
+<!-- صفحه موفقیت -->
+<section id="successView" class="hidden">
+  <div class="success-card">
+    <div class="success-emoji">🎉</div>
+    <h2>سفارش شما با موفقیت ثبت شد</h2>
+    <div class="success-facts" id="successFacts"></div>
+    <div class="success-actions">
+      <button class="btn btn-primary" data-act="back-to-menu">بازگشت به منو</button>
+      <button class="btn btn-ghost" id="successTrackBtn">پیگیری سفارش</button>
+    </div>
+  </div>
+</section>
+
+<!-- پرده‌ها و مودال‌ها -->
+<div class="overlay hidden" id="overlay"></div>
+
+<aside id="cartDrawer" class="drawer hidden" aria-label="سبد خرید">
+  <div class="drawer-head">
+    <h3>🛒 سبد خرید</h3>
+    <button class="btn-icon" data-act="close-all" aria-label="بستن">✕</button>
+  </div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>مبلغ کل سفارش</span><strong id="cartTotal">۰ تومان</strong></div>
+    <button class="btn btn-primary btn-block" data-act="go-checkout">ادامه و ثبت سفارش</button>
+  </div>
+</aside>
+
+<div id="productModal" class="modal modal-lg hidden" role="dialog" aria-modal="true"></div>
+<div id="checkoutModal" class="modal modal-lg hidden" role="dialog" aria-modal="true"></div>
+<div id="trackModal" class="modal hidden" role="dialog" aria-modal="true"></div>
+
+<div id="toastBox" class="toast-box" aria-live="polite"></div>
+
+<script src="db.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

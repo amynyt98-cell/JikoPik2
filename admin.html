@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پنل مدیریت | کافه جیک و پیک</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+
+<!-- ورود -->
+<div id="loginView" class="login-wrap hidden">
+  <form class="login-card" id="loginForm">
+    <div class="login-logo">☕</div>
+    <h1>پنل مدیریت کافه جیک و پیک</h1>
+    <label>نام کاربری<input name="u" autocomplete="username" required></label>
+    <label>رمز عبور<input name="p" type="password" autocomplete="current-password" required></label>
+    <button class="btn btn-primary btn-block" type="submit">ورود</button>
+    <p class="login-err hidden" id="loginErr">نام کاربری یا رمز عبور اشتباه است.</p>
+  </form>
+</div>
+
+<!-- پنل -->
+<div id="panelView" class="panel hidden">
+  <aside class="sidebar">
+    <div class="side-brand">☕ <b>مدیریت جیک و پیک</b></div>
+    <nav id="sideNav">
+      <button class="nav-btn active" data-sec="dashboard">📊 داشبورد</button>
+      <button class="nav-btn" data-sec="orders">🛒 سفارشات</button>
+      <button class="nav-btn" data-sec="products">🍰 محصولات</button>
+      <button class="nav-btn" data-sec="categories">📁 دسته‌بندی‌ها</button>
+      <button class="nav-btn" data-sec="reviews">💬 نظرات</button>
+      <button class="nav-btn" data-sec="qrs">📱 QR Code ها</button>
+      <button class="nav-btn" data-sec="reports">📈 گزارش‌ها</button>
+      <button class="nav-btn" data-sec="settings">⚙️ تنظیمات</button>
+    </nav>
+    <button class="nav-btn logout" id="logoutBtn">🚪 خروج</button>
+  </aside>
+  <main class="content" id="content"></main>
+</div>
+
+<div id="modalRoot" class="modal-root hidden"><div class="modal-box" id="modalBox"></div></div>
+<div id="toastBox" class="toast-box" aria-live="polite"></div>
+
+<script src="db.js"></script>
+<script src="qr.js"></script>
+<script src="admin-script.js"></script>
+</body>
+</html>

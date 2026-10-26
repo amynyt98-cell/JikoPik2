@@ -1,0 +1,16 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Vazirmatn,Tahoma,sans-serif}
+body{background:#1a120b;color:#fff;line-height:1.9}
+.wrap{max-width:900px;margin:0 auto;padding:30px 15px}
+h1{text-align:center}.sub{text-align:center;margin:5px 0 15px}.sub a{color:#e9a749}
+.card{background:#fff;color:#222;border-radius:20px;padding:25px;margin-top:15px}
+.card h2{margin-bottom:10px}.card input,.card select{width:100%;padding:11px;border:1px solid #ddd;border-radius:12px;margin:6px 0}
+.card button{background:#2b1d12;color:#fff;border:none;padding:11px 22px;border-radius:12px;cursor:pointer;margin:5px 0}
+.tabs{display:flex;gap:10px;flex-wrap:wrap}.tab{background:#e9a749;color:#000;border:none;padding:10px 18px;border-radius:20px;cursor:pointer}.tab.active{background:#fff}.out{background:#a00!important;color:#fff!important;border:none;padding:10px 18px;border-radius:20px;cursor:pointer}
+#menuList{display:flex;flex-direction:column;gap:10px;margin:10px 0}
+.mrow{display:flex;justify-content:space-between;align-items:center;background:#fdf8f2;border:1px solid #eee;border-radius:12px;padding:10px;gap:10px;flex-wrap:wrap}
+.mrow small{color:#777}
+.row{display:flex;gap:10px}.row input{flex:1}
+.qr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:15px}
+.qr-box{background:#fdf8f2;border:1px solid #eee;border-radius:15px;padding:12px;text-align:center;color:#222}
+#loginMsg{color:red}#setMsg{color:green}
+hr{margin:15px 0;border:none;border-top:1px solid #eee}
